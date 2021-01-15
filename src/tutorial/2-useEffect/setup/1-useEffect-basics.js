@@ -5,7 +5,7 @@ import React from 'react';
 const UseEffectBasics = () => {
   const [value, setValue] = React.useState(0);
   React.useEffect(() => {
-    document.title = `Counter value: ${value}`
+    if(value > 10 ) document.title = `Counter value: ${value}`
   });
   return (
     <>
