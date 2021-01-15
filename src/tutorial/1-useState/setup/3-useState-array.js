@@ -10,6 +10,7 @@ const UseStateArray = () => {
         const {id,name} = person;
         return <div key={id} className='item'>
           <h4>{name}</h4>
+          <button className='' type="button" onClick={() => setPeople(people.filter(persons => id !== persons.id))} >Clear Item</button>
         </div>
       })
     }
