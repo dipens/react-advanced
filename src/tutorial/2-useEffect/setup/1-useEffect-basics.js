@@ -5,8 +5,11 @@ import React from 'react';
 const UseEffectBasics = () => {
   const [value, setValue] = React.useState(0);
   React.useEffect(() => {
-    if(value > 10 ) document.title = `Counter value: ${value}`
-  });
+    if(value >= 1 ) document.title = `Counter value: ${value}`
+  },[value]);
+    React.useEffect(() => {
+    document.title = 'Initial load'
+  },[]);
   return (
     <>
       <h1>{value}</h1>
