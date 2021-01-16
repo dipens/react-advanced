@@ -15,10 +15,14 @@ import UseRefBasics from './tutorial/5-useRef/setup/1-useRef-basics';
 import UseReducerBasics from './tutorial/6-useReducer/setup'
 import PropDrillngBasics from './tutorial/7-prop-drilling/setup/1-prop-drilling'
 import UseContextBasics from './tutorial/8-useContext/setup/1-context-api';
+import CustomHooksBasics from './tutorial/9-custom-hooks/setup/1-fetch-example';
+import PropTypesBasics from './tutorial/10-prop-types/setup';
 
 function App() {
   return (
     <div className='container'>
+      <PropTypesBasics />
+      <CustomHooksBasics />
       <UseContextBasics />
       <PropDrillngBasics />
       <UseReducerBasics />
