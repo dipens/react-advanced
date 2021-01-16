@@ -8,10 +8,12 @@ import UseEffectCleanUp from './tutorial/2-useEffect/setup/2-useEffect-cleanup';
 import UseEffectFetch from './tutorial/2-useEffect/setup/3-useEffect-fetch-data';
 import ConditionalRendering from './tutorial/3-conditional-rendering/setup/1-multiple-returns';
 import ShortCircuit from './tutorial/3-conditional-rendering/setup/2-short-circuit';
+import ShowHide from './tutorial/3-conditional-rendering/setup/3-show-hide';
 
 function App() {
   return (
     <div className='container'>
+      <ShowHide />
       <ShortCircuit />
       <ConditionalRendering />
       <UseEffectFetch />
