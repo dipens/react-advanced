@@ -1,6 +1,6 @@
 import React from 'react';
 
-const url = 'https://api.github.com/users';
+const url = 'https://api.github.com/users/dipens';
 
 const UseEffectFetchData = () => {
   const [users, setUsers] = React.useState([]);
