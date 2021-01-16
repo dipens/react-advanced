@@ -14,10 +14,12 @@ import MultipleInputs from './tutorial/4-forms/setup/2-multiple-inputs';
 import UseRefBasics from './tutorial/5-useRef/setup/1-useRef-basics';
 import UseReducerBasics from './tutorial/6-useReducer/setup'
 import PropDrillngBasics from './tutorial/7-prop-drilling/setup/1-prop-drilling'
+import UseContextBasics from './tutorial/8-useContext/setup/1-context-api';
 
 function App() {
   return (
     <div className='container'>
+      <UseContextBasics />
       <PropDrillngBasics />
       <UseReducerBasics />
       <UseRefBasics />
