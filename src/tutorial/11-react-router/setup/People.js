@@ -6,6 +6,12 @@ const People = () => {
   const method = () => {
     setPeople(data);
   };
+  React.useEffect(() => {
+    method();
+    return () => {
+      
+    }
+  }, [])
   return (
     <div>
       <h1>People Page</h1>
