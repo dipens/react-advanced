@@ -1,13 +1,14 @@
 import React from 'react';
 
-const url = 'https://api.github.com/users';
+const url = 'https://api.github.com/users/dipens';
 
 const UseEffectFetchData = () => {
   const [users, setUsers] = React.useState([]);
   const getUsers = async () => {
     const response = await fetch(url);
     const usersJson = await response.json();
-    setUsers(usersJson);
+    setUsers([usersJson]);
+
   }
   React.useEffect(() => {
     getUsers();
