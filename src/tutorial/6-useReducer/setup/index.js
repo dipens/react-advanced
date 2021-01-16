@@ -2,19 +2,9 @@ import React from 'react';
 import uuid from 'react-uuid';
 import Modal from './Modal';
 import { data } from '../../../data';
+import reducer from './reducer'
 // reducer function
-const reducer = (state, action) => {
-  switch(action.type)
-  {
-    case 'ADD_ITEM':
-      const newPeople = [...state.people,action.payload]
-      return {...state,people: newPeople, isModalOpen: true, modalContent: 'Item added'}
-      case 'NO_VALUE':
-        return {...state, isModalOpen: true, modalContent: 'Name Empty'}
-      default:
-        throw new Error('No matching action type');
-  }
-};
+
 const defaultState = {
   people:data,
   isModalOpen: false,
@@ -34,9 +24,12 @@ const Index = () => {
       dispatch({type:'NO_VALUE'})
     }
   };
+  const closeModal = () => {
+    dispatch({type:'CLOSE_MODAL'});
+  }
   return (
     <>
-    {state.isModalOpen && <Modal modalContent={state.modalContent}/>}
+    {state.isModalOpen && <Modal closeModal={closeModal} modalContent={state.modalContent}/>}
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-input">
         <input type = "text" value={name} onChange={(e) => setName(e.target.value)}/>
@@ -48,6 +41,7 @@ const Index = () => {
       return (
         <div className='item' key={person.id}>
           <h4>{person.name}</h4>
+          <button type='button' onClick={() => {dispatch({type:'REMOVE_ITEM', payload:person.id})}}>Remove</button>
         </div>
       );
     })}

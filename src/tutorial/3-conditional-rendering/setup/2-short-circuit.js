@@ -7,6 +7,7 @@ const ShortCircuit = () => {
   const [isError, setIsError] = React.useState(false);
 
   const toggleError = () => {
+    setText('');
     setIsError(!isError);
   };
   return (
