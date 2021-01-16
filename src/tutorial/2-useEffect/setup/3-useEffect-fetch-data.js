@@ -7,8 +7,8 @@ const UseEffectFetchData = () => {
   const getUsers = async () => {
     const response = await fetch(url);
     const usersJson = await response.json();
+    //setUsers([usersJson]);
     setUsers([usersJson]);
-
   }
   React.useEffect(() => {
     getUsers();
